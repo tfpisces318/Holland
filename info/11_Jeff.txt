@@ -1,0 +1,25 @@
+填寫範例
+
+name: 王家豪
+
+nickName: 
+
+past: 資管
+
+now: 汽車旅館主管
+
+future: 
+
+
+what kind of app will you design in this class?
+旅館相關管理系統
+
+what kind of role in a app group you want to be?
+a. generate idea/future 
+b. programmer
+c. UI/UX designer
+( a->b->c )
+a -> b -> c
+
+是否曾上過 app基礎、進階？
+否
