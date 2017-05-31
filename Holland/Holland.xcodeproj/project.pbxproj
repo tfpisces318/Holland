@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28B7A9F4458DDF5D1C21E219 /* Pods_Holland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28FE820DBD32846CCC0553 /* Pods_Holland.framework */; };
 		E929A64A1ECC650700B21E9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E929A6491ECC650700B21E9F /* AppDelegate.swift */; };
 		E929A64C1ECC650700B21E9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E929A64B1ECC650700B21E9F /* ViewController.swift */; };
 		E929A64F1ECC650700B21E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E929A64D1ECC650700B21E9F /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A6640B3D4383BF85654EEA1A /* Pods-Holland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Holland.release.xcconfig"; path = "Pods/Target Support Files/Pods-Holland/Pods-Holland.release.xcconfig"; sourceTree = "<group>"; };
+		CF28FE820DBD32846CCC0553 /* Pods_Holland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Holland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E929A6461ECC650700B21E9F /* Holland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Holland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E929A6491ECC650700B21E9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E929A64B1ECC650700B21E9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		E929A6601ECC839800B21E9F /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		E96D5BE61ED30B97003C0AED /* FoodPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodPicture.swift; sourceTree = "<group>"; };
 		E96D5C061ED3232C003C0AED /* FoodSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSelect.swift; sourceTree = "<group>"; };
+		FA19C3E01C65CB3BB8DF3B2E /* Pods-Holland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Holland.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Holland/Pods-Holland.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B7A9F4458DDF5D1C21E219 /* Pods_Holland.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C31AC9CFCE95EDE5E0737E08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF28FE820DBD32846CCC0553 /* Pods_Holland.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7F44138D46DF355BD86D0BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA19C3E01C65CB3BB8DF3B2E /* Pods-Holland.debug.xcconfig */,
+				A6640B3D4383BF85654EEA1A /* Pods-Holland.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E929A63D1ECC650200B21E9F = {
 			isa = PBXGroup;
 			children = (
 				E929A6481ECC650700B21E9F /* Holland */,
 				E929A6471ECC650700B21E9F /* Products */,
+				C7F44138D46DF355BD86D0BB /* Pods */,
+				C31AC9CFCE95EDE5E0737E08 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E929A6581ECC650700B21E9F /* Build configuration list for PBXNativeTarget "Holland" */;
 			buildPhases = (
+				22930BF5B6873AE83FE4A4C7 /* [CP] Check Pods Manifest.lock */,
 				E929A6421ECC650200B21E9F /* Sources */,
 				E929A6431ECC650200B21E9F /* Frameworks */,
 				E929A6441ECC650200B21E9F /* Resources */,
+				D42BDD5FA9C9F5E6C951A9D4 /* [CP] Embed Pods Frameworks */,
+				6AF11A0E9A396BC7FE0886F3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,6 +187,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22930BF5B6873AE83FE4A4C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6AF11A0E9A396BC7FE0886F3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Holland/Pods-Holland-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D42BDD5FA9C9F5E6C951A9D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Holland/Pods-Holland-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E929A6421ECC650200B21E9F /* Sources */ = {
@@ -290,6 +365,7 @@
 		};
 		E929A6591ECC650700B21E9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA19C3E01C65CB3BB8DF3B2E /* Pods-Holland.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Holland/Info.plist;
@@ -302,6 +378,7 @@
 		};
 		E929A65A1ECC650700B21E9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6640B3D4383BF85654EEA1A /* Pods-Holland.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Holland/Info.plist;
