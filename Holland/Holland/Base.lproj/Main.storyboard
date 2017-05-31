@@ -40,9 +40,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密碼" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ros-os-sMt">
                                 <rect key="frame" x="20" y="449" width="193" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="193" id="4s3-kI-3Ul"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -63,6 +60,7 @@
                                 <state key="normal" title="進入點餐系統"/>
                                 <connections>
                                     <action selector="btnStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aba-Xm-enD"/>
+                                    <segue destination="POo-ej-v5f" kind="show" id="Vrh-FP-dqL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="點餐系統" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdh-Ct-jSp">
@@ -72,10 +70,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l7m-1a-iLE">
-                                <rect key="frame" x="155" y="449" width="239" height="30"/>
+                                <rect key="frame" x="198" y="449" width="196" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="239" id="MW7-dt-0tC"/>
-                                    <constraint firstAttribute="height" constant="30" id="SAe-f8-MSg"/>
+                                    <constraint firstAttribute="width" constant="196" id="pl1-6B-ieI"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -85,34 +82,36 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gdh-Ct-jSp" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="2eW-NY-yt8"/>
+                            <constraint firstItem="l7m-1a-iLE" firstAttribute="top" secondItem="Sgl-aE-2Ze" secondAttribute="bottom" constant="41" id="9an-g2-l3s"/>
                             <constraint firstItem="bUK-qN-OdR" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="CpD-tV-MN4"/>
                             <constraint firstItem="fib-Hr-IU1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Eqy-4T-4uO"/>
-                            <constraint firstItem="l7m-1a-iLE" firstAttribute="baseline" secondItem="Ros-os-sMt" secondAttribute="baseline" id="QC2-Sh-cA6"/>
+                            <constraint firstItem="Ros-os-sMt" firstAttribute="trailing" secondItem="fib-Hr-IU1" secondAttribute="trailing" id="KqA-aT-h9B"/>
                             <constraint firstItem="gdh-Ct-jSp" firstAttribute="top" secondItem="bUK-qN-OdR" secondAttribute="bottom" constant="18.333333333333314" id="SLD-1A-m3r"/>
-                            <constraint firstItem="Ros-os-sMt" firstAttribute="leading" secondItem="fib-Hr-IU1" secondAttribute="leading" id="W0B-U8-SP6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ijc-Rs-x9W" secondAttribute="bottom" constant="79" id="ZBq-hq-8al"/>
                             <constraint firstAttribute="trailing" secondItem="Sgl-aE-2Ze" secondAttribute="trailing" constant="20" id="bSy-l4-i1P"/>
                             <constraint firstItem="gdh-Ct-jSp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-0.33333333333334281" id="djI-eb-qZb"/>
-                            <constraint firstItem="Ros-os-sMt" firstAttribute="top" secondItem="fib-Hr-IU1" secondAttribute="bottom" constant="41" id="emu-Eg-AwR"/>
                             <constraint firstItem="fib-Hr-IU1" firstAttribute="top" secondItem="gdh-Ct-jSp" secondAttribute="bottom" constant="30" id="gLR-HQ-dKz"/>
+                            <constraint firstItem="Ros-os-sMt" firstAttribute="leading" secondItem="fib-Hr-IU1" secondAttribute="leading" id="hMd-Gb-Nwg"/>
                             <constraint firstItem="Sgl-aE-2Ze" firstAttribute="centerY" secondItem="fib-Hr-IU1" secondAttribute="centerY" id="idV-sh-en0"/>
                             <constraint firstItem="gdh-Ct-jSp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="jCR-cv-sG2"/>
                             <constraint firstItem="bUK-qN-OdR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="jUN-le-6rG"/>
                             <constraint firstItem="bUK-qN-OdR" firstAttribute="centerX" secondItem="Ijc-Rs-x9W" secondAttribute="centerX" constant="1.5" id="kJ8-hb-DKd"/>
-                            <constraint firstItem="l7m-1a-iLE" firstAttribute="trailing" secondItem="Sgl-aE-2Ze" secondAttribute="trailing" id="l3I-BH-pAF"/>
+                            <constraint firstItem="l7m-1a-iLE" firstAttribute="baseline" secondItem="Ros-os-sMt" secondAttribute="baseline" id="o1J-Fi-Wdz"/>
                             <constraint firstItem="bUK-qN-OdR" firstAttribute="centerX" secondItem="gdh-Ct-jSp" secondAttribute="centerX" constant="0.83333333333334281" id="u6b-np-Z8x"/>
+                            <constraint firstItem="l7m-1a-iLE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ymj-dz-eRZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CdE-uN-XXC"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="btnSt" destination="Ijc-Rs-x9W" id="Mkj-wR-smb"/>
+                        <outlet property="txtPW" destination="l7m-1a-iLE" id="4r3-mw-jZB"/>
                         <outlet property="txtRoomNum" destination="Sgl-aE-2Ze" id="eaG-1w-hkL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="931.88405797101461" y="39.945652173913047"/>
+            <point key="canvasLocation" x="267" y="40"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cnK-xU-MEK">
@@ -125,12 +124,41 @@
                     <view key="view" contentMode="scaleToFill" id="AST-BF-FOr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="FFW-zH-0jQ">
+                                <rect key="frame" x="65" y="34.999999999999986" width="287" height="220.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="287" id="aP1-gZ-EiC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoA-Ab-bkK">
+                                <rect key="frame" x="65" y="584" width="287" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <state key="normal" title="開始點餐"/>
+                                <connections>
+                                    <segue destination="AFU-Pf-1VL" kind="show" id="5vn-NS-krK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="歡迎使用點餐系統" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNy-dF-B7y">
+                                <rect key="frame" x="67" y="286" width="282" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FFW-zH-0jQ" firstAttribute="top" secondItem="zwL-Pc-jns" secondAttribute="bottom" constant="15" id="AVu-Mj-ejf"/>
+                            <constraint firstItem="FFW-zH-0jQ" firstAttribute="centerX" secondItem="AST-BF-FOr" secondAttribute="centerX" constant="1.5" id="WRn-Br-txw"/>
+                            <constraint firstItem="FFW-zH-0jQ" firstAttribute="height" secondItem="AST-BF-FOr" secondAttribute="height" multiplier="0.3" id="ul7-AW-90E"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KzQ-is-z3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1816" y="761"/>
+            <point key="canvasLocation" x="1034.7826086956522" y="39.945652173913047"/>
         </scene>
         <!--Food Select-->
         <scene sceneID="EYd-tA-aIB">
@@ -182,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODi-w4-28r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1815.9420289855075" y="39.945652173913047"/>
+            <point key="canvasLocation" x="1848" y="40"/>
         </scene>
         <!--Food Picture-->
         <scene sceneID="tgR-UI-fbe">
@@ -234,7 +262,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ve9-jH-fMC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.637681159420293" y="39.945652173913047"/>
+            <point key="canvasLocation" x="-477" y="40"/>
         </scene>
     </scenes>
     <resources>

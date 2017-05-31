@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITextFieldDelegate{
+class ViewController: UIViewController{
     
    
     let RoomNum:[String] = ["101", "102", "103", "105", "106", "107", "108", "110", "201", "202", "203", "205", "206", "207", "208", "210", "211", "221", "222", "223", "301", "302", "303", "305", "306", "307", "308", "310", "311", "501", "502", "503", "505", "506", "507", "508", "510", "511", "512", "513", ]
     
     @IBOutlet var btnSt: UIButton!
-        @IBOutlet var txtRoomNum: UITextField!
+    @IBOutlet var txtRoomNum: UITextField!
+    @IBOutlet var txtPW: UITextField!
         @IBAction func btnStart(_ sender: Any) {
             
  
@@ -31,15 +32,19 @@ class ViewController: UIViewController,UITextFieldDelegate{
                 self.present(alertController, animated: true, completion: nil)
             }
             var CheckRoom = 0
+            
             for numofroom in RoomNum{
                 if inputRoomNum == numofroom{
-                    
                     print(numofroom)
                     CheckRoom = 1
-   
+                }else if txtPW.text == "123"{
+                    CheckRoom = 1
+                }else{
+                    CheckRoom = 0
                 }
-                
             }
+            
+ 
             if CheckRoom == 0{
                 let alertController = UIAlertController(title: "請輸入正確房號", message: "請輸入正確房號 例：101 , 203 ...", preferredStyle: .alert)
                 
