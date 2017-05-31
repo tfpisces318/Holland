@@ -17,6 +17,7 @@
 		E929A6611ECC839800B21E9F /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E929A6601ECC839800B21E9F /* logo.png */; };
 		E96D5BE71ED30B97003C0AED /* FoodPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5BE61ED30B97003C0AED /* FoodPicture.swift */; };
 		E96D5C071ED3232C003C0AED /* FoodSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D5C061ED3232C003C0AED /* FoodSelect.swift */; };
+		E9B1A9C11EDEFFD70099BFA7 /* WelecomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B1A9C01EDEFFD70099BFA7 /* WelecomePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		E929A6601ECC839800B21E9F /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		E96D5BE61ED30B97003C0AED /* FoodPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodPicture.swift; sourceTree = "<group>"; };
 		E96D5C061ED3232C003C0AED /* FoodSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSelect.swift; sourceTree = "<group>"; };
+		E9B1A9C01EDEFFD70099BFA7 /* WelecomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelecomePage.swift; sourceTree = "<group>"; };
 		FA19C3E01C65CB3BB8DF3B2E /* Pods-Holland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Holland.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Holland/Pods-Holland.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				E929A65C1ECC65B700B21E9F /* documents */,
 				E96D5BE61ED30B97003C0AED /* FoodPicture.swift */,
 				E929A6491ECC650700B21E9F /* AppDelegate.swift */,
+				E9B1A9C01EDEFFD70099BFA7 /* WelecomePage.swift */,
 				E96D5C061ED3232C003C0AED /* FoodSelect.swift */,
 				E929A64B1ECC650700B21E9F /* ViewController.swift */,
 				E929A64D1ECC650700B21E9F /* Main.storyboard */,
@@ -245,6 +248,7 @@
 				E929A64C1ECC650700B21E9F /* ViewController.swift in Sources */,
 				E929A64A1ECC650700B21E9F /* AppDelegate.swift in Sources */,
 				E96D5C071ED3232C003C0AED /* FoodSelect.swift in Sources */,
+				E9B1A9C11EDEFFD70099BFA7 /* WelecomePage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

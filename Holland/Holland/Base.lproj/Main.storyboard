@@ -113,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="267" y="40"/>
         </scene>
-        <!--View Controller-->
+        <!--Welecome Page-->
         <scene sceneID="cnK-xU-MEK">
             <objects>
-                <viewController id="POo-ej-v5f" sceneMemberID="viewController">
+                <viewController id="POo-ej-v5f" customClass="WelecomePage" customModule="Holland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zwL-Pc-jns"/>
                         <viewControllerLayoutGuide type="bottom" id="Jcd-Dl-9yC"/>
