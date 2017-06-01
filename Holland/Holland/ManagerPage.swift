@@ -1,22 +1,19 @@
 //
-//  FoodSelect.swift
+//  ManagerPage.swift
 //  Holland
 //
-//  Created by ios135 on 2017/5/22.
+//  Created by 王家豪 on 2017/6/1.
 //  Copyright © 2017年 ios135. All rights reserved.
 //
 
 import UIKit
 
-class FoodSelect: UIViewController{
+class ManagerPage: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

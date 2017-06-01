@@ -32,21 +32,38 @@ class ViewController: UIViewController{
                 self.present(alertController, animated: true, completion: nil)
             }
             var CheckRoom = 0
+            var CheckPW = 0
             
             for numofroom in RoomNum{
                 if inputRoomNum == numofroom{
                     print(numofroom)
                     CheckRoom = 1
-                }else if txtPW.text == "123"{
-                    CheckRoom = 1
+                    break
                 }else{
                     CheckRoom = 0
                 }
+                
             }
+            
+            if txtPW.text == "123"{
+                CheckPW = 1
+            }else{
+                CheckPW = 0
+            }
+
             
  
             if CheckRoom == 0{
                 let alertController = UIAlertController(title: "請輸入正確房號", message: "請輸入正確房號 例：101 , 203 ...", preferredStyle: .alert)
+                
+                let callAction = UIAlertAction(title: "確定", style: .default) { (action) in}
+                
+                alertController.addAction(callAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+            
+            if CheckPW == 0{
+                let alertController = UIAlertController(title: "請輸入正確密碼", message: "請輸入正確密碼", preferredStyle: .alert)
                 
                 let callAction = UIAlertAction(title: "確定", style: .default) { (action) in}
                 
