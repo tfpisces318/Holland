@@ -10,7 +10,7 @@ import UIKit
 
 class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
 
-    var arys = ["鍋燒意麵","皮蛋瘦肉粥","水餃","美味餐包"]
+    var arysSnack = ["鍋燒意麵","皮蛋瘦肉粥","水餃","美味餐包"]
     
     @IBAction func btnBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -25,9 +25,23 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let snack:String = "各式宵夜/點心"
         
-        return snack
+        switch section {
+        case 0:
+            return "24小時休息餐（宵夜/點心）"
+        case 1:
+            return "活力早餐"
+        case 2:
+            return "風味午、晚餐"
+        default:
+            return ""
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let ToFoodPic = storyboard?.instantiateViewController(withIdentifier: "FoodPicPage") as! FoodPicture
+        self.navigationController?.pushViewController(ToFoodPic, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -39,7 +53,7 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     }
         
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arys.count
+        return arysSnack.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -49,14 +63,36 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = arys[indexPath.row]
+        cell.textLabel?.text = arysSnack[indexPath.row]
         
         let foodImg:UIImageView = UIImageView(frame: CGRect(x: 200, y: 10, width: 150, height: 100))
-        let imgstr = "Food" + String(indexPath.row+1)+".jpg"
         
-        foodImg.image = UIImage(named: imgstr)
+        switch indexPath.section {
+        case 0:
+            let imgstr = "Snack" + String(indexPath.row+1)+".jpg"
+            
+            foodImg.image = UIImage(named: imgstr)
+            
+            cell.addSubview(foodImg)
+        case 1:
+            let imgstr = "Breakfast" + String(indexPath.row+1)+".jpg"
+            
+            foodImg.image = UIImage(named: imgstr)
+            
+            cell.addSubview(foodImg)
+        case 2:
+            let imgstr = "Dinner" + String(indexPath.row+1)+".jpg"
+            
+            foodImg.image = UIImage(named: imgstr)
+            
+            cell.addSubview(foodImg)
+            
+
+        default:
+            print("aa")
+        }
         
-        cell.addSubview(foodImg)
+        
         
         
         

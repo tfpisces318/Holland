@@ -10,10 +10,19 @@ import UIKit
 
 class FoodPicture: UIViewController {
 
+    
+    
+    @IBOutlet weak var txtFoodCount: UITextField!
+    @IBAction func btnBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        txtFoodCount.isEnabled = false
     }
 
     override func didReceiveMemoryWarning() {

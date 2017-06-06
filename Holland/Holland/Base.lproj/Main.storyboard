@@ -60,7 +60,6 @@
                                 <state key="normal" title="進入點餐系統"/>
                                 <connections>
                                     <action selector="btnStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aba-Xm-enD"/>
-                                    <segue destination="POo-ej-v5f" kind="show" id="2sx-xG-Zxz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="點餐系統" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdh-Ct-jSp">
@@ -116,12 +115,12 @@
         <!--Manager Page-->
         <scene sceneID="o3r-fw-8ZF">
             <objects>
-                <viewController id="FM9-xt-boN" customClass="ManagerPage" customModule="Holland" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ManagerPage" storyboardIdentifier="ManagerPage" id="FM9-xt-boN" customClass="ManagerPage" customModule="Holland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pDg-qt-b8F"/>
                         <viewControllerLayoutGuide type="bottom" id="2O1-W2-QCF"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Nlw-uy-3Sd">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="ManagerPage" id="Nlw-uy-3Sd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -134,12 +133,12 @@
         <!--Welecome Page-->
         <scene sceneID="cnK-xU-MEK">
             <objects>
-                <viewController id="POo-ej-v5f" customClass="WelecomePage" customModule="Holland" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="GuessPage" storyboardIdentifier="GuessPage" id="POo-ej-v5f" customClass="WelecomePage" customModule="Holland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zwL-Pc-jns"/>
                         <viewControllerLayoutGuide type="bottom" id="Jcd-Dl-9yC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AST-BF-FOr">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="GuessPage" id="AST-BF-FOr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -207,11 +206,11 @@
                                         <rect key="frame" x="0.0" y="28" width="354" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Lq-a2-H6n" id="RCC-n8-ELK">
-                                            <rect key="frame" x="0.0" y="0.0" width="354" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ukS-F3-S1n">
-                                                    <rect key="frame" x="15" y="0.0" width="324" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="324" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -227,7 +226,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zc-51-NuZ">
-                                <rect key="frame" x="30" y="29" width="41" height="36"/>
+                                <rect key="frame" x="30" y="30" width="41" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="返回"/>
                                 <connections>
@@ -243,6 +242,7 @@
                             <constraint firstItem="DNW-62-cpy" firstAttribute="top" secondItem="8Zc-51-NuZ" secondAttribute="bottom" constant="5" id="VvL-G3-UT0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DNW-62-cpy" secondAttribute="trailing" constant="10" id="Ytd-cL-ZWs"/>
                             <constraint firstItem="DNW-62-cpy" firstAttribute="top" secondItem="ZSJ-Un-2zB" secondAttribute="bottom" constant="50" id="aNw-R3-BGt"/>
+                            <constraint firstItem="8Zc-51-NuZ" firstAttribute="top" secondItem="ZSJ-Un-2zB" secondAttribute="bottom" constant="10" id="np4-h2-emO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ECI-Y0-Skb"/>
@@ -257,35 +257,85 @@
         <!--Food Picture-->
         <scene sceneID="tgR-UI-fbe">
             <objects>
-                <viewController id="qzt-gY-469" customClass="FoodPicture" customModule="Holland" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="FoodPicPage" storyboardIdentifier="FoodPicPage" id="qzt-gY-469" customClass="FoodPicture" customModule="Holland" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GZO-0V-Dk0"/>
                         <viewControllerLayoutGuide type="bottom" id="7b5-XE-tip"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ciu-hB-qem">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="FoodPicPage" id="ciu-hB-qem">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="RPC-7p-hpa">
-                                <rect key="frame" x="149" y="370" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="RPC-7p-hpa">
+                                <rect key="frame" x="284" y="451" width="94" height="29"/>
                             </stepper>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DUd-KJ-wWS">
-                                <rect key="frame" x="87" y="103" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DUd-KJ-wWS">
+                                <rect key="frame" x="30" y="74" width="364" height="239"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="239" id="43E-yp-3iX"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MI1-U8-HgM">
-                                <rect key="frame" x="112" y="527" width="179" height="109"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2r5-NS-OYc">
+                                <rect key="frame" x="30" y="30" width="41" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="返回"/>
+                                <connections>
+                                    <action selector="btnBack:" destination="AFU-Pf-1VL" eventType="touchUpInside" id="1so-y8-KWg"/>
+                                    <action selector="btnBack:" destination="qzt-gY-469" eventType="touchUpInside" id="3Iu-b5-4Vw"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J4Q-fj-HxV">
+                                <rect key="frame" x="141" y="451" width="113" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="數量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsU-8t-gdu">
+                                <rect key="frame" x="58" y="451" width="68" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="BmW-2A-KR9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MI1-U8-HgM">
+                                <rect key="frame" x="127" y="585" width="160" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="ZFQ-KU-bRE"/>
+                                    <constraint firstAttribute="height" constant="48" id="rpy-T9-AMT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="確認點餐"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WsU-8t-gdu" firstAttribute="leading" secondItem="ciu-hB-qem" secondAttribute="leadingMargin" constant="38" id="1LJ-Yj-DYb"/>
+                            <constraint firstItem="MI1-U8-HgM" firstAttribute="leading" secondItem="ciu-hB-qem" secondAttribute="leadingMargin" constant="107" id="3Yh-Wk-YWT"/>
+                            <constraint firstItem="J4Q-fj-HxV" firstAttribute="bottom" secondItem="WsU-8t-gdu" secondAttribute="bottom" id="6vK-6Z-ygc"/>
+                            <constraint firstItem="2r5-NS-OYc" firstAttribute="leading" secondItem="ciu-hB-qem" secondAttribute="leadingMargin" constant="10" id="74I-4r-q7j"/>
+                            <constraint firstItem="MI1-U8-HgM" firstAttribute="top" secondItem="RPC-7p-hpa" secondAttribute="bottom" constant="105" id="GVw-ks-hwN"/>
+                            <constraint firstItem="J4Q-fj-HxV" firstAttribute="centerY" secondItem="RPC-7p-hpa" secondAttribute="centerY" id="HTF-Zk-2jy"/>
+                            <constraint firstItem="2r5-NS-OYc" firstAttribute="top" secondItem="GZO-0V-Dk0" secondAttribute="bottom" constant="10" id="Kwt-G3-ecG"/>
+                            <constraint firstItem="J4Q-fj-HxV" firstAttribute="top" secondItem="RPC-7p-hpa" secondAttribute="top" id="Mhj-U1-DBw"/>
+                            <constraint firstItem="J4Q-fj-HxV" firstAttribute="leading" secondItem="WsU-8t-gdu" secondAttribute="trailing" constant="15" id="Nec-WF-Gr5"/>
+                            <constraint firstItem="DUd-KJ-wWS" firstAttribute="leading" secondItem="ciu-hB-qem" secondAttribute="leadingMargin" constant="10" id="Pqz-u9-dki"/>
+                            <constraint firstItem="J4Q-fj-HxV" firstAttribute="top" secondItem="WsU-8t-gdu" secondAttribute="top" id="Ttt-pY-UuQ"/>
+                            <constraint firstItem="DUd-KJ-wWS" firstAttribute="top" secondItem="2r5-NS-OYc" secondAttribute="bottom" constant="8" id="XQA-eB-VNF"/>
+                            <constraint firstItem="RPC-7p-hpa" firstAttribute="top" secondItem="DUd-KJ-wWS" secondAttribute="bottom" constant="138" id="bpV-Hx-24j"/>
+                            <constraint firstItem="RPC-7p-hpa" firstAttribute="leading" secondItem="J4Q-fj-HxV" secondAttribute="trailing" constant="30" id="e7W-3c-eW5"/>
+                            <constraint firstItem="RPC-7p-hpa" firstAttribute="centerX" secondItem="ciu-hB-qem" secondAttribute="centerX" constant="124" id="jpk-ox-KXe"/>
+                            <constraint firstItem="DUd-KJ-wWS" firstAttribute="trailing" secondItem="ciu-hB-qem" secondAttribute="trailingMargin" id="kmJ-1y-tck"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtFoodCount" destination="J4Q-fj-HxV" id="iNg-Ia-mZP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4D-0r-LhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3547.826086956522" y="39.945652173913047"/>
+            <point key="canvasLocation" x="2802.898550724638" y="39.945652173913047"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qfb-Pd-MWI">

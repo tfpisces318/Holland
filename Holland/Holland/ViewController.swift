@@ -20,6 +20,29 @@ class ViewController: UIViewController{
             
  
             let inputRoomNum = txtRoomNum.text
+            
+            //管理員帳密
+            let ManagerID:String = "999"
+            let ManagerPW:String = "239"
+            //檢查帳密
+            var CheckRoom = 0
+            var CheckPW = 0
+
+            
+            if txtRoomNum.text == ManagerID && txtPW.text == ManagerPW{
+                
+                let ToManagerPage = storyboard?.instantiateViewController(withIdentifier: "ManagerPage") as! ManagerPage
+                
+                self.navigationController?.pushViewController(ToManagerPage, animated: true)
+                
+            }
+            
+            
+            
+            
+            
+            
+            
                     
             if inputRoomNum == nil || inputRoomNum == ""{
                 
@@ -31,8 +54,6 @@ class ViewController: UIViewController{
                 alertController.addAction(callAction)
                 self.present(alertController, animated: true, completion: nil)
             }
-            var CheckRoom = 0
-            var CheckPW = 0
             
             for numofroom in RoomNum{
                 if inputRoomNum == numofroom{
@@ -70,9 +91,17 @@ class ViewController: UIViewController{
                 alertController.addAction(callAction)
                 self.present(alertController, animated: true, completion: nil)
             }
-
-        
-    }
+            
+            
+        if CheckRoom == 1 && CheckPW == 1{
+            
+                let ToGuessPage = storyboard?.instantiateViewController(withIdentifier: "GuessPage") as! WelecomePage
+                
+                self.navigationController?.pushViewController(ToGuessPage, animated: true)
+            }
+            
+            
+}
     
     
     
