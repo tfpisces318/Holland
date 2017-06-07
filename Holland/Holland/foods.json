@@ -1,0 +1,37 @@
+/* 
+  foods.json
+  Holland
+
+  Created by ios on 2017/6/7.
+  Copyright © 2017年 ios135. All rights reserved.
+*/
+
+[
+ {
+ "foodCategory": "點心",
+ "foodContents": [
+                  {
+                  "foodName": "鍋燒意麵（冬粉）",
+                  "foodPic": "Snack1.jpg",
+                  "foodPrice":100
+                  },{
+                  "foodName": "皮蛋瘦肉粥",
+                  "foodPic": "Snack2.jpg",
+                  "foodPrice":100
+                  }
+                  ]
+ },
+ {"foodCategory": "點心",
+ "foodContents": [
+                  {
+                  "foodName": "鍋燒意麵（冬粉）",
+                  "foodPic": "Snack1.jpg",
+                  "foodPrice":100
+                  },{
+                  "foodName": "皮蛋瘦肉粥",
+                  "foodPic": "Snack2.jpg",
+                  "foodPrice":100
+                  }
+                  ]},
+ {}
+ ]

@@ -7,14 +7,16 @@
 //
 
 import UIKit
-
+import SwiftyJSON
 //class OrderInfo:Any{
 //    var FoodName:String?
 //    var FoodPic:UIImage?
 //}
 
-class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
+class TEDFoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
 
+    var foods:Array<Any>?
+    
     var arysSnack = ["鍋燒意麵（冬粉）","皮蛋瘦肉粥","水餃（附湯）","奶油餐包（附紅茶）"]
     var arysBreakfast = ["西式活力餐","中式營養餐","鍋燒意麵（冬粉）","水餃15粒（附湯）","皮蛋瘦肉粥","新鮮虱目魚粥"]
     var arysDinner = ["紅燒牛腩飯","印度咖哩雞肉飯","照燒雞腿飯（麵）","原汁牛肉麵（冬粉）","和風日式燒肉麵（冬粉）","麻油雞湯麵線","新鮮虱目魚粥","玉醬什錦素食"]
@@ -35,7 +37,35 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
         
     }
     
+    
+    func loadJson(){
+        let file="foods.json"
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            
+            let path = dir.appendingPathComponent(file)
+            
+            //reading
+            do {
+                
+                if let dataFromString = path.absoluteString.data(using: .utf8, allowLossyConversion: false) {
+                    let json = JSON(data: dataFromString)
+                    self.foods=json.arrayObject
+                }
+                
+                
+                
+            }
+            catch {/* error handling here */}
+        }
+        
+    
+    }
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        self.foods[section]
+        
+//        ["foodCategory"].string
+        
         
         switch section {
         case 0:

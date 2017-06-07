@@ -28,6 +28,8 @@
 		3FBA55F01EE791D2009FE1A2 /* Snack4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FBA55DE1EE791D2009FE1A2 /* Snack4.jpg */; };
 		3FC52B9A1EE6797500139BD7 /* logo.ico in Resources */ = {isa = PBXBuildFile; fileRef = 3FC52B991EE6797500139BD7 /* logo.ico */; };
 		3FF9AB441EDFC4290089D993 /* ManagerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF9AB431EDFC4290089D993 /* ManagerPage.swift */; };
+		810F1C7D1EE821610093785D /* TEDFoodSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810F1C7C1EE821610093785D /* TEDFoodSelect.swift */; };
+		810F1C7F1EE824620093785D /* foods.json in Resources */ = {isa = PBXBuildFile; fileRef = 810F1C7E1EE824620093785D /* foods.json */; };
 		E929A64A1ECC650700B21E9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E929A6491ECC650700B21E9F /* AppDelegate.swift */; };
 		E929A64C1ECC650700B21E9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E929A64B1ECC650700B21E9F /* ViewController.swift */; };
 		E929A64F1ECC650700B21E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E929A64D1ECC650700B21E9F /* Main.storyboard */; };
@@ -61,6 +63,8 @@
 		3FBA55DE1EE791D2009FE1A2 /* Snack4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Snack4.jpg; sourceTree = "<group>"; };
 		3FC52B991EE6797500139BD7 /* logo.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = logo.ico; sourceTree = "<group>"; };
 		3FF9AB431EDFC4290089D993 /* ManagerPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerPage.swift; sourceTree = "<group>"; };
+		810F1C7C1EE821610093785D /* TEDFoodSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TEDFoodSelect.swift; sourceTree = "<group>"; };
+		810F1C7E1EE824620093785D /* foods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foods.json; sourceTree = "<group>"; };
 		A6640B3D4383BF85654EEA1A /* Pods-Holland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Holland.release.xcconfig"; path = "Pods/Target Support Files/Pods-Holland/Pods-Holland.release.xcconfig"; sourceTree = "<group>"; };
 		CF28FE820DBD32846CCC0553 /* Pods_Holland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Holland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E929A6461ECC650700B21E9F /* Holland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Holland.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +136,7 @@
 				E96D5BE61ED30B97003C0AED /* FoodPicture.swift */,
 				E929A6491ECC650700B21E9F /* AppDelegate.swift */,
 				E9B1A9C01EDEFFD70099BFA7 /* WelecomePage.swift */,
+				810F1C7C1EE821610093785D /* TEDFoodSelect.swift */,
 				E96D5C061ED3232C003C0AED /* FoodSelect.swift */,
 				3FF9AB431EDFC4290089D993 /* ManagerPage.swift */,
 				E929A64B1ECC650700B21E9F /* ViewController.swift */,
@@ -139,6 +144,7 @@
 				E929A6501ECC650700B21E9F /* Assets.xcassets */,
 				E929A6521ECC650700B21E9F /* LaunchScreen.storyboard */,
 				E929A6551ECC650700B21E9F /* Info.plist */,
+				810F1C7E1EE824620093785D /* foods.json */,
 			);
 			path = Holland;
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 				3FBA55E41EE791D2009FE1A2 /* Breakfast6.jpg in Resources */,
 				3FBA55E51EE791D2009FE1A2 /* Dinner1.jpg in Resources */,
 				3FBA55E71EE791D2009FE1A2 /* Dinner3.jpg in Resources */,
+				810F1C7F1EE824620093785D /* foods.json in Resources */,
 				3FBA55E81EE791D2009FE1A2 /* Dinner4.jpg in Resources */,
 				3FBA55EF1EE791D2009FE1A2 /* Snack3.jpg in Resources */,
 				3FBA55F01EE791D2009FE1A2 /* Snack4.jpg in Resources */,
@@ -326,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FF9AB441EDFC4290089D993 /* ManagerPage.swift in Sources */,
+				810F1C7D1EE821610093785D /* TEDFoodSelect.swift in Sources */,
 				E96D5BE71ED30B97003C0AED /* FoodPicture.swift in Sources */,
 				E929A64C1ECC650700B21E9F /* ViewController.swift in Sources */,
 				E929A64A1ECC650700B21E9F /* AppDelegate.swift in Sources */,
