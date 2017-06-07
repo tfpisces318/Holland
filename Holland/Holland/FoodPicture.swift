@@ -27,6 +27,7 @@ class FoodPicture: UIViewController {
     @IBAction func stepSetCount(_ sender: Any) {
         let number = Int(stepCount.value)
         txtFoodCount.text = String(number)
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()

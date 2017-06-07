@@ -226,7 +226,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zc-51-NuZ">
-                                <rect key="frame" x="30" y="30" width="41" height="25"/>
+                                <rect key="frame" x="30" y="30" width="41" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="返回"/>
                                 <connections>
@@ -242,7 +242,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="DNW-62-cpy" secondAttribute="trailing" constant="10" id="Ytd-cL-ZWs"/>
                             <constraint firstItem="DNW-62-cpy" firstAttribute="top" secondItem="ZSJ-Un-2zB" secondAttribute="bottom" constant="50" id="aNw-R3-BGt"/>
                             <constraint firstItem="8Zc-51-NuZ" firstAttribute="top" secondItem="ZSJ-Un-2zB" secondAttribute="bottom" constant="10" id="np4-h2-emO"/>
-                            <constraint firstItem="DNW-62-cpy" firstAttribute="top" secondItem="8Zc-51-NuZ" secondAttribute="bottom" constant="15" id="urs-du-bN8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ECI-Y0-Skb"/>
