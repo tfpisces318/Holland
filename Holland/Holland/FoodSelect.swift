@@ -230,7 +230,9 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     }
     
     func jsonFromData(){
-        let path = Bundle.main.path(forResource: "foods", ofType: JSON)
+        let path = Bundle.main.path(forResource: "foods", ofType: "json")
+        
+        
         
     }
     

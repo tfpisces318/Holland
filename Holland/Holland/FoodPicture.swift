@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class FoodPicture: UIViewController {
     var getOrderInfo:OrderInfo?
     var RoomMember = 2
     var FoodpicName:String?
     
+    //firebase連結
+    var ref:DatabaseReference!
+
     
     @IBOutlet weak var lblValue: UILabel!
     @IBOutlet weak var imgviewFoodpic: UIImageView!
@@ -26,6 +31,17 @@ class FoodPicture: UIViewController {
     }
     
     @IBAction func btnOrder(_ sender: Any) {
+        //取用Firebase
+        
+//        ref = Database.database().reference()
+//        
+//        self.ref.setValue(["holland-ed769": "234"])
+        
+        
+        
+        
+        
+        
         let Order = storyboard?.instantiateViewController(withIdentifier: "GuessPage") as! WelecomePage
         self.navigationController?.pushViewController(Order, animated: true)
     }
