@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import SwiftyJSON
 
-//class OrderInfo:Any{
-//    var FoodName:String?
-//    var FoodPic:UIImage?
-//}
+class OrderInfo:Any{
+    var FoodName:String?
+    var FoodPic:UIImage?
+    var FoodValue:String?
+}
+
 
 class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
 
@@ -23,6 +26,8 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     static var FoodName:String?
     static var FoodPic:String?
     
+    var orderinfo:OrderInfo?
+    
     @IBAction func btnBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -33,6 +38,7 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
 
         // Do any additional setup after loading the view.
         
+        self.orderinfo = OrderInfo()
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -52,8 +58,10 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        
         switch indexPath.section {
         case 0:
+            orderinfo?.FoodValue = "60"
             switch indexPath.row {
             case 0:
                 FoodSelect.FoodName = "鍋燒意麵（冬粉）"
@@ -71,6 +79,7 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
                 print("no act")
             }
         case 1:
+            orderinfo?.FoodValue = "120"
             switch indexPath.row {
             case 0:
                 FoodSelect.FoodName = "西式活力餐"
@@ -94,6 +103,7 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
                 print("no act")
             }
         case 2:
+            orderinfo?.FoodValue = "120"
             switch indexPath.row {
             case 0:
                 FoodSelect.FoodName = "紅燒牛腩飯"
@@ -129,7 +139,7 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
         
         
         let ToFoodPic = storyboard?.instantiateViewController(withIdentifier: "FoodPicPage") as! FoodPicture
-        
+        ToFoodPic.getOrderInfo=self.orderinfo
         self.navigationController?.pushViewController(ToFoodPic, animated: true)
         
         
@@ -216,6 +226,11 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
+    func jsonFromData(){
+        let path = Bundle.main.path(forResource: "foods", ofType: JSON)
         
     }
     

@@ -9,11 +9,12 @@
 import UIKit
 
 class FoodPicture: UIViewController {
-
+    var getOrderInfo:OrderInfo?
     var RoomMember = 2
     var FoodpicName:String?
     
     
+    @IBOutlet weak var lblValue: UILabel!
     @IBOutlet weak var imgviewFoodpic: UIImageView!
     
     @IBOutlet weak var stepCount: UIStepper!
@@ -24,6 +25,10 @@ class FoodPicture: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func btnOrder(_ sender: Any) {
+        let Order = storyboard?.instantiateViewController(withIdentifier: "GuessPage") as! WelecomePage
+        self.navigationController?.pushViewController(Order, animated: true)
+    }
     @IBAction func stepSetCount(_ sender: Any) {
         let number = Int(stepCount.value)
         txtFoodCount.text = String(number)
@@ -32,13 +37,9 @@ class FoodPicture: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.o
         
         txtFoodCount.isEnabled = false
-        
-
-//        let imgFoodpic:UIImage? = UIImage(named: "Snack1.jpg")
-        
         
     }
 
@@ -54,6 +55,7 @@ class FoodPicture: UIViewController {
         FoodpicName = FoodSelect.FoodPic
        
         imgviewFoodpic.image = UIImage(named: FoodpicName!)
+        lblValue.text = self.getOrderInfo?.FoodValue
         
 
     }
