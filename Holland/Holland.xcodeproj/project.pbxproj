@@ -28,6 +28,7 @@
 		3FBA55EF1EE791D2009FE1A2 /* Snack3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FBA55DD1EE791D2009FE1A2 /* Snack3.jpg */; };
 		3FBA55F01EE791D2009FE1A2 /* Snack4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FBA55DE1EE791D2009FE1A2 /* Snack4.jpg */; };
 		3FC52B9A1EE6797500139BD7 /* logo.ico in Resources */ = {isa = PBXBuildFile; fileRef = 3FC52B991EE6797500139BD7 /* logo.ico */; };
+		3FDFDD531EF1179400A682A8 /* OrderCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFDD521EF1179400A682A8 /* OrderCheck.swift */; };
 		3FF9AB441EDFC4290089D993 /* ManagerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF9AB431EDFC4290089D993 /* ManagerPage.swift */; };
 		810F1C7F1EE824620093785D /* foods.json in Resources */ = {isa = PBXBuildFile; fileRef = 810F1C7E1EE824620093785D /* foods.json */; };
 		E929A64A1ECC650700B21E9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E929A6491ECC650700B21E9F /* AppDelegate.swift */; };
@@ -63,6 +64,7 @@
 		3FBA55DD1EE791D2009FE1A2 /* Snack3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Snack3.jpg; sourceTree = "<group>"; };
 		3FBA55DE1EE791D2009FE1A2 /* Snack4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Snack4.jpg; sourceTree = "<group>"; };
 		3FC52B991EE6797500139BD7 /* logo.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = logo.ico; sourceTree = "<group>"; };
+		3FDFDD521EF1179400A682A8 /* OrderCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderCheck.swift; path = documents/OrderCheck.swift; sourceTree = "<group>"; };
 		3FF9AB431EDFC4290089D993 /* ManagerPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerPage.swift; sourceTree = "<group>"; };
 		810F1C7E1EE824620093785D /* foods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foods.json; sourceTree = "<group>"; };
 		A6640B3D4383BF85654EEA1A /* Pods-Holland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Holland.release.xcconfig"; path = "Pods/Target Support Files/Pods-Holland/Pods-Holland.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				E929A65C1ECC65B700B21E9F /* documents */,
 				E96D5BE61ED30B97003C0AED /* FoodPicture.swift */,
+				3FDFDD521EF1179400A682A8 /* OrderCheck.swift */,
 				E929A6491ECC650700B21E9F /* AppDelegate.swift */,
 				E9B1A9C01EDEFFD70099BFA7 /* WelecomePage.swift */,
 				E96D5C061ED3232C003C0AED /* FoodSelect.swift */,
@@ -214,6 +217,10 @@
 		E929A63E1ECC650200B21E9F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+					2,
+				);
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = ios135;
@@ -335,6 +342,7 @@
 			files = (
 				3FF9AB441EDFC4290089D993 /* ManagerPage.swift in Sources */,
 				E96D5BE71ED30B97003C0AED /* FoodPicture.swift in Sources */,
+				3FDFDD531EF1179400A682A8 /* OrderCheck.swift in Sources */,
 				E929A64C1ECC650700B21E9F /* ViewController.swift in Sources */,
 				E929A64A1ECC650700B21E9F /* AppDelegate.swift in Sources */,
 				E96D5C071ED3232C003C0AED /* FoodSelect.swift in Sources */,

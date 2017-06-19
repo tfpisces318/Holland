@@ -11,13 +11,40 @@ import SwiftyJSON
 
 class OrderInfo:Any{
     var FoodName:String?
-    var FoodPic:UIImage?
+    var FoodPic:String?
     var FoodValue:String?
+}
+
+class csjsonFromDate{
+//    var jsonData:JSON?
+    
+    class func jsonFromData() -> JSON?{
+        var jsonData:JSON?
+        let path = Bundle.main.path(forResource: "foods", ofType: "json")
+        let data1:Data
+        let json_parsed:JSON
+        do{
+            try data1 = Data(contentsOf: URL(fileURLWithPath:
+                path!, isDirectory: false))
+            json_parsed=JSON(data: data1)
+            jsonData=json_parsed
+            //鍋燒意麵
+            let foodname01 = json_parsed[0]["foodContents"][0]["foodName"].string
+            
+        }catch{
+            print(error.localizedDescription)
+        }
+    
+        return jsonData
+    }
 }
 
 
 class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
 
+    let js = csjsonFromDate.jsonFromData()
+    
+    
     var arysSnack = ["鍋燒意麵（冬粉）","皮蛋瘦肉粥","水餃（附湯）","奶油餐包（附紅茶）"]
     var arysBreakfast = ["西式活力餐","中式營養餐","鍋燒意麵（冬粉）","水餃15粒（附湯）","皮蛋瘦肉粥","新鮮虱目魚粥"]
     var arysDinner = ["紅燒牛腩飯","印度咖哩雞肉飯","照燒雞腿飯（麵）","原汁牛肉麵（冬粉）","和風日式燒肉麵（冬粉）","麻油雞湯麵線","新鮮虱目魚粥","玉醬什錦素食"]
@@ -29,6 +56,7 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     var orderinfo:OrderInfo?
     
     @IBAction func btnBack(_ sender: Any) {
+        
         self.navigationController?.popViewController(animated: true)
     }
     @IBOutlet weak var FoodTableView: UITableView!
@@ -64,17 +92,17 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
             orderinfo?.FoodValue = "60"
             switch indexPath.row {
             case 0:
-                FoodSelect.FoodName = "鍋燒意麵（冬粉）"
-                FoodSelect.FoodPic = "Snack1.jpg"
+                orderinfo?.FoodName = "鍋燒意麵（冬粉）"
+                orderinfo?.FoodPic = "Snack1.jpg"
             case 1:
-                FoodSelect.FoodName = "皮蛋瘦肉粥"
-                FoodSelect.FoodPic = "Snack2.jpg"
+                orderinfo?.FoodName = "皮蛋瘦肉粥"
+                orderinfo?.FoodPic = "Snack2.jpg"
             case 2:
-                FoodSelect.FoodName = "水餃（附湯）"
-                FoodSelect.FoodPic = "Snack3.jpg"
+                orderinfo?.FoodName = "水餃（附湯）"
+                orderinfo?.FoodPic = "Snack3.jpg"
             case 3:
-                FoodSelect.FoodName = "奶油餐包（附紅茶）"
-                FoodSelect.FoodPic = "Snack4.jpg"
+                orderinfo?.FoodName = "奶油餐包（附紅茶）"
+                orderinfo?.FoodPic = "Snack4.jpg"
             default:
                 print("no act")
             }
@@ -82,23 +110,23 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
             orderinfo?.FoodValue = "120"
             switch indexPath.row {
             case 0:
-                FoodSelect.FoodName = "西式活力餐"
-                FoodSelect.FoodPic = "Breakfast1.jpg"
+                orderinfo?.FoodName = "西式活力餐"
+                orderinfo?.FoodPic = "Breakfast1.jpg"
             case 1:
-                FoodSelect.FoodName = "中式營養餐"
-                FoodSelect.FoodPic = "Breakfast2.jpg"
+                orderinfo?.FoodName = "中式營養餐"
+                orderinfo?.FoodPic = "Breakfast2.jpg"
             case 2:
-                FoodSelect.FoodName = "鍋燒意麵（冬粉）"
-                FoodSelect.FoodPic = "Breakfast3.jpg"
+                orderinfo?.FoodName = "鍋燒意麵（冬粉）"
+                orderinfo?.FoodPic = "Breakfast3.jpg"
             case 3:
-                FoodSelect.FoodName = "水餃15粒（附湯）"
-                FoodSelect.FoodPic = "Breakfast4.jpg"
+                orderinfo?.FoodName = "水餃15粒（附湯）"
+                orderinfo?.FoodPic = "Breakfast4.jpg"
             case 4:
-                FoodSelect.FoodName = "皮蛋瘦肉粥"
-                FoodSelect.FoodPic = "Breakfast5.jpg"
+                orderinfo?.FoodName = "皮蛋瘦肉粥"
+                orderinfo?.FoodPic = "Breakfast5.jpg"
             case 5:
-                FoodSelect.FoodName = "新鮮虱目魚粥"
-                FoodSelect.FoodPic = "Breakfast6.jpg"
+                orderinfo?.FoodName = "新鮮虱目魚粥"
+                orderinfo?.FoodPic = "Breakfast6.jpg"
             default:
                 print("no act")
             }
@@ -106,29 +134,29 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
             orderinfo?.FoodValue = "120"
             switch indexPath.row {
             case 0:
-                FoodSelect.FoodName = "紅燒牛腩飯"
-                FoodSelect.FoodPic = "Dinner1.jpg"
+                orderinfo?.FoodName = "紅燒牛腩飯"
+                orderinfo?.FoodPic = "Dinner1.jpg"
             case 1:
-                FoodSelect.FoodName = "印度咖哩雞肉飯"
-                FoodSelect.FoodPic = "Dinner2.jpg"
+                orderinfo?.FoodName = "印度咖哩雞肉飯"
+                orderinfo?.FoodPic = "Dinner2.jpg"
             case 2:
-                FoodSelect.FoodName = "照燒雞腿飯（麵）"
-                FoodSelect.FoodPic = "Dinner3.jpg"
+                orderinfo?.FoodName = "照燒雞腿飯（麵）"
+                orderinfo?.FoodPic = "Dinner3.jpg"
             case 3:
-                FoodSelect.FoodName = "原汁牛肉麵（冬粉）"
-                FoodSelect.FoodPic = "Dinner4.jpg"
+                orderinfo?.FoodName = "原汁牛肉麵（冬粉）"
+                orderinfo?.FoodPic = "Dinner4.jpg"
             case 4:
-                FoodSelect.FoodName = "和風日式燒肉麵（冬粉）"
-                FoodSelect.FoodPic = "Dinner5.jpg"
+                orderinfo?.FoodName = "和風日式燒肉麵（冬粉）"
+                orderinfo?.FoodPic = "Dinner5.jpg"
             case 5:
-                FoodSelect.FoodName = "麻油雞湯麵線"
-                FoodSelect.FoodPic = "Dinner6.jpg"
+                orderinfo?.FoodName = "麻油雞湯麵線"
+                orderinfo?.FoodPic = "Dinner6.jpg"
             case 6:
-                FoodSelect.FoodName = "新鮮虱目魚粥"
-                FoodSelect.FoodPic = "Dinner7.jpg"
+                orderinfo?.FoodName = "新鮮虱目魚粥"
+                orderinfo?.FoodPic = "Dinner7.jpg"
             case 7:
-                FoodSelect.FoodName = "玉醬什錦素食"
-                FoodSelect.FoodPic = "Dinner8.jpg"
+                orderinfo?.FoodName = "玉醬什錦素食"
+                orderinfo?.FoodPic = "Dinner8.jpg"
             default:
                 print("no act")
             }
@@ -225,17 +253,6 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-    
-    func jsonFromData(){
-        let path = Bundle.main.path(forResource: "foods", ofType: "json")
-        
-        
-        
-    }
-    
 
     /*
     // MARK: - Navigation
@@ -248,3 +265,4 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     */
 
 }
+ 

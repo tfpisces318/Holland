@@ -1,30 +1,19 @@
 //
-//  WelecomePage.swift
+//  OrderCheck.swift
 //  Holland
 //
-//  Created by ios135 on 2017/5/31.
+//  Created by 王家豪 on 2017/6/14.
 //  Copyright © 2017年 ios135. All rights reserved.
 //
 
 import UIKit
-import Firebase
 
-class WelecomePage: UIViewController {
+class OrderCheck: UIViewController {
 
-    @IBAction func btnStart(_ sender: Any) {
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let backItem = UIBarButtonItem()
-        backItem.title = "返回"
-        navigationItem.backBarButtonItem = backItem
     }
 
     override func didReceiveMemoryWarning() {
