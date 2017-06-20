@@ -9,9 +9,10 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import SwiftyJSON
 
 class FoodPicture: UIViewController {
-    let csfoodcount:CSFoodcount = CSFoodcount()
+    var foodcount = CSFoodcount.FoodCount
     var getOrderInfo:OrderInfo?
     var RoomMember = 2
     var FoodpicName:String?
@@ -48,8 +49,10 @@ class FoodPicture: UIViewController {
     
     @IBAction func btnOrder(_ sender: UIButton) {
         
+        //餐點數量＋1
+        foodcount = foodcount + 1
+        
         //創建資料夾
-        var foodcount = CSFoodcount.FoodCount
         let manager = FileManager.default
         let folderName = "guessFoodOrderInfo"
         let dirName = documentsPath().appendingPathComponent(folderName)
@@ -69,25 +72,45 @@ class FoodPicture: UIViewController {
         
         let RoomNum = self.userDefault.object(forKey: "RoomNum")
         
-        //用字典存重要資料
-        var GuessOrderInfo:Dictionary = ["RoomNumber" :RoomNum , "OrderTime" : NowTime , "FoodName" : lblFoodName.text , "FoodCount" : String(Int(stepCount.value))]
+        //用json存顧客點的餐點
+      //  let GuessOrderInfo:String = "{ \"RoomNumber\": " + RoomNum + ",\"OrderTime\": " + NowTime + ",\"FoodName\": " + lblFoodName.text + ",\"FoodCount\": " + String(Int(stepCount.value)) + "}"
         
+        
+        
+       // let jsonStr = "{ \"people\": [{ \"firstName\": \"Paul\", \"lastName\": \"Hudson\", \"isAlive\": true }, { \"firstName\": \"Angela\", \"lastName\": \"Merkel\", \"isAlive\": true }, { \"firstName\": \"George\", \"lastName\": \"Washington\", \"isAlive\": false } ] }"
+        
+        //用字典存重要資料
+        let GuessOrderInfo:Dictionary = ["RoomNumber" :RoomNum ,"FoodID":foodcount, "OrderTime" : NowTime , "FoodName" : lblFoodName.text , "FoodCount" : String(Int(stepCount.value))]
+        
+        let thejsData = try? JSONSerialization.data(withJSONObject: GuessOrderInfo, options: [])
+        let thejsText = String(data: thejsData!, encoding: .utf8)
+        
+    //    let data = thejsText?.data(using: String.Encoding.utf8)
+        
+     //   let foodinfojs = JSON(data: data!)
+        
+        
+
         
         //取用Firebase
         
-        ref = Database.database().reference()
-    self.ref.child("cWBMy1c4WxYkM7iI0PKH8Sy4j1M").setValue(["房號":GuessOrderInfo["RoomNumber"],"點餐時間": GuessOrderInfo["OrderTime"],"餐點名稱":GuessOrderInfo["FoodName"] , "餐點數量":GuessOrderInfo["FoodCount"]])
-        
-        //餐點數量＋1
-        foodcount = foodcount + 1
+    /*    ref = Database.database().reference()
+    self.ref.child("cWBMy1c4WxYkM7iI0PKH8Sy4j1M").setValue(["房號":RoomNum,"點餐時間": NowTime,"餐點名稱":lblFoodName.text, "餐點數量":String(Int(stepCount.value))])
+     */
         
         //存取資料
-        let fileName:String = "orderinfo" + String(foodcount)
-        var content = GuessOrderInfo
+        let fileName:String = "orderinfo" + String(foodcount) + ".json"
         
-        var fileDir = documentsPath().appendingPathComponent(fileName)
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first{
+        let path = dir.appendingPathComponent(fileName)
+        
+        do {
+            try thejsText?.write(to: path, atomically: false, encoding: String.Encoding.utf8)
+        }catch{
+            print(error.localizedDescription)
+            }
 
-        
+        }
         
         switch sender.tag {
         case 1:
@@ -117,7 +140,7 @@ class FoodPicture: UIViewController {
         
         
         txtFoodCount.isEnabled = false
-        
+        print(foodcount)
         
     }
     
@@ -129,11 +152,12 @@ class FoodPicture: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        let csfoodcount:CSFoodcount = CSFoodcount()
         let FoodName = self.getOrderInfo?.FoodName
         let FoodValue = self.getOrderInfo?.FoodValue
         
         
-        lblFoodName.text = FoodName
+        lblFoodName.text = FoodName!
         
         FoodpicName = self.getOrderInfo?.FoodPic
         

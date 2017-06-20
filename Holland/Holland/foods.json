@@ -1,6 +1,6 @@
  [
   {
-  "foodCategory": "Snack",
+  "foodCategory": "24小時休息餐點（宵夜）",
   "foodPrice": "60",
   "foodContents": [
                    {
@@ -22,7 +22,7 @@
                    ]
   },
   {
-  "foodCategory": "Breakfast",
+  "foodCategory": "活力早餐",
   "foodPrice": "120",
   "foodContents": [
                    {
@@ -52,7 +52,7 @@
                    ]
   },
   {
-  "foodCategory": "Dinner",
+  "foodCategory": "精緻午晚餐",
   "foodPrice": "120",
   "foodContents": [
                    {
