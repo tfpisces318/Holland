@@ -54,9 +54,9 @@ class ViewController: UIViewController{
         
         if txtRoomNum.text == ManagerID && txtPW.text == ManagerPW{
             
-            let ToManagerPage = storyboard?.instantiateViewController(withIdentifier: "ManagerPage") as! ManagerPage
+           // let ToManagerPage = storyboard?.instantiateViewController(withIdentifier: "ManagerPage") as! ManagerPage
             
-            self.navigationController?.pushViewController(ToManagerPage, animated: true)
+           // self.navigationController?.pushViewController(ToManagerPage, animated: true)
             
         }
         

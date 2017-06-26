@@ -13,11 +13,11 @@ class OrderInfo:Any{
     var FoodName:String?
     var FoodPic:String?
     var FoodValue:String?
+    var testFoodcount = 0
 }
 
 class csjsonFromDate{
 //    var jsonData:JSON?
-    
     class func jsonFromData() -> JSON?{
         var jsonData:JSON?
         let path = Bundle.main.path(forResource: "foods", ofType: "json")
@@ -44,15 +44,23 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
 
     let js = csjsonFromDate.jsonFromData()
     
-    static var FoodName:String?
-    static var FoodPic:String?
-    
     var orderinfo:OrderInfo?
+    let userDefault = UserDefaults.standard
     
-    @IBAction func btnBack(_ sender: Any) {
-        
     
-        self.navigationController?.popViewController(animated: true)
+    @IBAction func btnSend(_ sender: Any) {
+        let foodcount:Int? = userDefault.integer(forKey: "foodcount")
+        if foodcount == 0 || foodcount == nil{
+            let alertController = UIAlertController(title: "請先進行點餐", message: "請先進行點餐", preferredStyle: .alert)
+            
+            let callAction = UIAlertAction(title: "確定", style: .default) { (action) in}
+            
+            alertController.addAction(callAction)
+            self.present(alertController, animated: true, completion: nil)
+        }else{
+            let toOrdercheck = storyboard?.instantiateViewController(withIdentifier: "ordercheck") as! OrderCheck
+            self.navigationController?.pushViewController(toOrdercheck, animated: true)
+        }
     }
     @IBOutlet weak var FoodTableView: UITableView!
     
@@ -94,7 +102,7 @@ class FoodSelect: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 65
     }
-        
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return (js?[section]["foodContents"].count)!

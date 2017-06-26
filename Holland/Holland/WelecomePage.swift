@@ -11,8 +11,11 @@ import Firebase
 
 class WelecomePage: UIViewController {
 
+    let userDefault = UserDefaults.standard
+    
     @IBAction func btnStart(_ sender: Any) {
-        
+        let tofoodselect = storyboard?.instantiateViewController(withIdentifier: "foodselect") as! FoodSelect
+        self.navigationController?.pushViewController(tofoodselect, animated: true)
     }
     
     override func viewDidLoad() {
@@ -32,6 +35,9 @@ class WelecomePage: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        userDefault.set(0, forKey: "foodcount")
+    }
 
     /*
     // MARK: - Navigation

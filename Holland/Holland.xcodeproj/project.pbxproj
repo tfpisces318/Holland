@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		28B7A9F4458DDF5D1C21E219 /* Pods_Holland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28FE820DBD32846CCC0553 /* Pods_Holland.framework */; };
+		3F49B3261EFD439900F81989 /* CellSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F49B3251EFD439900F81989 /* CellSettingTableViewCell.swift */; };
 		3F6582BF1EEEC5980022C675 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F6582BE1EEEC5980022C675 /* GoogleService-Info.plist */; };
 		3FBA55DF1EE791D2009FE1A2 /* Breakfast1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FBA55CD1EE791D2009FE1A2 /* Breakfast1.jpg */; };
 		3FBA55E01EE791D2009FE1A2 /* Breakfast2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FBA55CE1EE791D2009FE1A2 /* Breakfast2.jpg */; };
@@ -29,7 +30,6 @@
 		3FBA55F01EE791D2009FE1A2 /* Snack4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FBA55DE1EE791D2009FE1A2 /* Snack4.jpg */; };
 		3FC52B9A1EE6797500139BD7 /* logo.ico in Resources */ = {isa = PBXBuildFile; fileRef = 3FC52B991EE6797500139BD7 /* logo.ico */; };
 		3FDFDD531EF1179400A682A8 /* OrderCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFDD521EF1179400A682A8 /* OrderCheck.swift */; };
-		3FF9AB441EDFC4290089D993 /* ManagerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF9AB431EDFC4290089D993 /* ManagerPage.swift */; };
 		810F1C7F1EE824620093785D /* foods.json in Resources */ = {isa = PBXBuildFile; fileRef = 810F1C7E1EE824620093785D /* foods.json */; };
 		E929A64A1ECC650700B21E9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E929A6491ECC650700B21E9F /* AppDelegate.swift */; };
 		E929A64C1ECC650700B21E9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E929A64B1ECC650700B21E9F /* ViewController.swift */; };
@@ -44,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F49B3251EFD439900F81989 /* CellSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSettingTableViewCell.swift; sourceTree = "<group>"; };
 		3F6582BE1EEEC5980022C675 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FBA55CD1EE791D2009FE1A2 /* Breakfast1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Breakfast1.jpg; sourceTree = "<group>"; };
 		3FBA55CE1EE791D2009FE1A2 /* Breakfast2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Breakfast2.jpg; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		3FBA55DE1EE791D2009FE1A2 /* Snack4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Snack4.jpg; sourceTree = "<group>"; };
 		3FC52B991EE6797500139BD7 /* logo.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = logo.ico; sourceTree = "<group>"; };
 		3FDFDD521EF1179400A682A8 /* OrderCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderCheck.swift; path = documents/OrderCheck.swift; sourceTree = "<group>"; };
-		3FF9AB431EDFC4290089D993 /* ManagerPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerPage.swift; sourceTree = "<group>"; };
 		810F1C7E1EE824620093785D /* foods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foods.json; sourceTree = "<group>"; };
 		A6640B3D4383BF85654EEA1A /* Pods-Holland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Holland.release.xcconfig"; path = "Pods/Target Support Files/Pods-Holland/Pods-Holland.release.xcconfig"; sourceTree = "<group>"; };
 		CF28FE820DBD32846CCC0553 /* Pods_Holland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Holland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,9 +138,9 @@
 				E96D5BE61ED30B97003C0AED /* FoodPicture.swift */,
 				3FDFDD521EF1179400A682A8 /* OrderCheck.swift */,
 				E929A6491ECC650700B21E9F /* AppDelegate.swift */,
+				3F49B3251EFD439900F81989 /* CellSettingTableViewCell.swift */,
 				E9B1A9C01EDEFFD70099BFA7 /* WelecomePage.swift */,
 				E96D5C061ED3232C003C0AED /* FoodSelect.swift */,
-				3FF9AB431EDFC4290089D993 /* ManagerPage.swift */,
 				E929A64B1ECC650700B21E9F /* ViewController.swift */,
 				E929A64D1ECC650700B21E9F /* Main.storyboard */,
 				E929A6501ECC650700B21E9F /* Assets.xcassets */,
@@ -340,8 +340,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FF9AB441EDFC4290089D993 /* ManagerPage.swift in Sources */,
 				E96D5BE71ED30B97003C0AED /* FoodPicture.swift in Sources */,
+				3F49B3261EFD439900F81989 /* CellSettingTableViewCell.swift in Sources */,
 				3FDFDD531EF1179400A682A8 /* OrderCheck.swift in Sources */,
 				E929A64C1ECC650700B21E9F /* ViewController.swift in Sources */,
 				E929A64A1ECC650700B21E9F /* AppDelegate.swift in Sources */,
