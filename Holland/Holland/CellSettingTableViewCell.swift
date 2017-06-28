@@ -14,6 +14,10 @@ class CellSettingTableViewCell: UITableViewCell {
     @IBOutlet weak var lblFoodname: UILabel!
     @IBOutlet weak var lblFoodcount: UILabel!
     @IBOutlet weak var lblFoodPrice: UILabel!
+    @IBOutlet weak var FirebaseCell: UILabel!
+    @IBOutlet weak var FirebaseFoodName: UILabel!
+    @IBOutlet weak var FirebaseFoodCount: UILabel!
+    @IBOutlet weak var FirebaseFoodtime: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

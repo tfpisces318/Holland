@@ -82,7 +82,7 @@ class FoodPicture: UIViewController {
             
             let now = NSDate()
             let formatter = DateFormatter()
-            formatter.dateFormat = "MM/dd  HH:mm"
+            formatter.dateFormat = "MM/dd-HH:mm"
             let NowTime = formatter.string(from: now as Date)
             
             let RoomNum = self.userDefault.object(forKey: "RoomNum")

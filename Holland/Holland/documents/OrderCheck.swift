@@ -84,8 +84,9 @@ class OrderCheck: UIViewController ,UITableViewDataSource , UITableViewDelegate 
                 
                 ref = Database.database().reference()
                 
-                //self.ref.queryOrdered(byChild: "Food_Orders").observe(<#T##eventType: DataEventType##DataEventType#>, with: <#T##(DataSnapshot) -> Void#>)
-                self.ref.child("Food_Orders").child(timeStr).child("ID:" + String(describing: ID)).setValue(["餐點名稱": FoodName , "餐點數量":FoodCount , "餐點價格":FoodPrice])
+                
+                //self.ref.queryOrdered(byChild: "Food_Orders").observe(, with: )
+                self.ref.child("Food_Orders").child(RoomNum! + "_ID:" + String(describing: ID!)).setValue(["點餐時間":OrderTime , "餐點名稱": FoodName , "餐點數量":FoodCount , "餐點價格":FoodPrice])
                 
                 
 //                dicForFirebase.updateValue(String(describing: ID!), forKey: "餐點ID" + String(i))
