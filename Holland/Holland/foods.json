@@ -1,0 +1,92 @@
+ [
+  {
+  "foodCategory": "24小時休息餐點（宵夜）",
+  "foodPrice": "60",
+  "foodContents": [
+                   {
+                   "foodName": "鍋燒意麵（冬粉）",
+                   "foodPic": "Snack1.jpg"
+                   },
+                   {
+                   "foodName": "皮蛋瘦肉粥",
+                   "foodPic": "Snack2.jpg"
+                   },
+                   {
+                   "foodName": "水餃（附湯）",
+                   "foodPic": "Snack3.jpg"
+                   },
+                   {
+                   "foodName": "奶油餐包（附紅茶）",
+                   "foodPic": "Snack4.jpg"
+                   }
+                   ]
+  },
+  {
+  "foodCategory": "活力早餐",
+  "foodPrice": "120",
+  "foodContents": [
+                   {
+                   "foodName": "西式活力餐",
+                   "foodPic": "Breakfast1.jpg"
+                   },
+                   {
+                   "foodName": "中式營養餐",
+                   "foodPic": "Breakfast2.jpg"
+                   },
+                   {
+                   "foodName": "鍋燒意麵（冬粉）",
+                   "foodPic": "Breakfast3.jpg"
+                   },
+                   {
+                   "foodName": "水餃15粒（附湯）",
+                   "foodPic": "Breakfast4.jpg"
+                   },
+                   {
+                   "foodName": "皮蛋瘦肉粥",
+                   "foodPic": "Breakfast5.jpg"
+                   },
+                   {
+                   "foodName": "新鮮虱目魚粥",
+                   "foodPic": "Breakfast6.jpg"
+                   }
+                   ]
+  },
+  {
+  "foodCategory": "精緻午晚餐",
+  "foodPrice": "120",
+  "foodContents": [
+                   {
+                   "foodName": "紅燒牛腩飯",
+                   "foodPic": "Dinner1.jpg"
+                   },
+                   {
+                   "foodName": "印度咖哩雞肉飯",
+                   "foodPic": "Dinner2.jpg"
+                   },
+                   {
+                   "foodName": "照燒雞腿飯（麵）",
+                   "foodPic": "Dinner3.jpg"
+                   },
+                   {
+                   "foodName": "原汁牛肉麵（冬粉）",
+                   "foodPic": "Dinner4.jpg"
+                   },
+                   {
+                   "foodName": "和風日式燒肉麵（冬粉）",
+                   "foodPic": "Dinner5.jpg"
+                   },
+                   {
+                   "foodName": "麻油雞湯麵線",
+                   "foodPic": "Dinner6.jpg"
+                   },
+                   {
+                   "foodName": "新鮮虱目魚粥",
+                   "foodPic": "Dinner7.jpg"
+                   },
+                   {
+                   "foodName": "玉醬什錦素食",
+                   "foodPic": "Dinner8.jpg"
+                   }
+                   ]
+  }
+  ]
